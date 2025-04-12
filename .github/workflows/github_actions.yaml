@@ -1,0 +1,14 @@
+on:
+  repository_dispatch:
+    types: [reliza-build-event]
+
+name: Hello World on Trigger 2025
+
+jobs:
+  build:
+    name: Build And Push
+    runs-on: ubuntu-latest
+    steps:
+      - id: reliza-build-start 
+        name: Hello World
+        run: echo "hellow-world"
