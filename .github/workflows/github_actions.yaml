@@ -11,4 +11,6 @@ jobs:
     steps:
       - id: reliza-build-start 
         name: Hello World
-        run: echo "hellow-world"
+        env:
+          MESSAGE: ${{ github.event.client_payload.message }}
+        run: echo "hello-world $MESSAGE"
